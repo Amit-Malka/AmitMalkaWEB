@@ -1,25 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector(".slider");
-    const slides = document.querySelectorAll(".slide");
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
+    const slides = document.querySelectorAll(".slider .slide");
+    const nextButton = document.querySelector(".slider-container .next");
+    const prevButton = document.querySelector(".slider-container .prev");
 
-    let currentIndex = 0;
+    let currentSlide = 0;
 
-    const updateSliderPosition = () => {
-        const width = slides[0].clientWidth;
-        slider.style.transform = `translateX(-${currentIndex * width}px)`;
-    };
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
+        });
+    }
 
-    prevButton.addEventListener("click", () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-        updateSliderPosition();
-    });
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
 
-    nextButton.addEventListener("click", () => {
-        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-        updateSliderPosition();
-    });
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
 
-    window.addEventListener("resize", updateSliderPosition);
+    nextButton.addEventListener("click", nextSlide);
+    prevButton.addEventListener("click", prevSlide);
+
+    // Initialize slider
+    showSlide(currentSlide);
 });
