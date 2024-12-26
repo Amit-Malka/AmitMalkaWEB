@@ -2246,7 +2246,6 @@ button.prev:hover, button.next:hover {
 }
 
 
-/* Social Links Styling */
 .social-links {
     list-style: none;
     display: flex;
@@ -2288,7 +2287,7 @@ button.prev:hover, button.next:hover {
         right: 10px;
     }
     .slider-container {
-        padding: 0 20px; /* Adds some padding around the slider for better spacing */
+        padding: 0 20px;
     }
 }
 
@@ -2303,15 +2302,15 @@ html {
 }
 
 .skills-list li {
-    font-size: 1em; /* גודל הטקסט */
+    font-size: 1em;
     margin-bottom: 0.5em;
     display: flex;
-    align-items: center; /* יישור האייקון עם הטקסט */
+    align-items: center;
 }
 
 .skills-list li i {
-    margin-right: 0.5em; /* רווח בין האייקון לטקסט */
-    font-size: 1em; /* גודל האייקון שווה לגודל הטקסט */
-    color: #777; /* צבע האייקון */
+    margin-right: 0.5em;
+    font-size: 1em;
+    color: #777;
 }
 
