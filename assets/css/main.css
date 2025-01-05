@@ -2093,12 +2093,14 @@ input, select, textarea {
 					#main > .panel.intro header h1 {
 						line-height: 1.25em;
 						margin-bottom: 0;
+						
 					}
 
 					#main > .panel.intro header p {
 						letter-spacing: -0.015em;
 						font-size: 1.25em;
 						margin: 0.25em 0 0 0;
+						color: #333;
 					}
 
 				@media screen and (max-width: 980px) {
@@ -2313,4 +2315,3 @@ html {
     font-size: 1em;
     color: #777;
 }
-
