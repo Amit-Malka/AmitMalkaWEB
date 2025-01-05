@@ -21,7 +21,8 @@ The website is live and accessible at:
 - **HTML5** and **CSS3** for structure and styling.
 - **JavaScript** for interactive elements, including the slider.
 - **Formspree** for the contact form functionality.
-
+- **Google Analytics** For tracking and analyzing user traffic.
+  
 ## Project Structure
 ```
 AmitMalkaWEB/
