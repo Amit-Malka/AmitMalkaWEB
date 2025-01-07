@@ -176,6 +176,46 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/slider.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+			<script>
+				// Select the main navigation
+				const sections = ['#main', '#about', '#Projects', '#contact'];
+				let currentIndex = 0;
+			
+				const showSection = (index) => {
+					const currentHash = sections[index];
+					if (currentHash) {
+						window.location.hash = currentHash;
+					}
+				};
+			
+				// Initialize Hammer.js on the whole body
+				const hammer = new Hammer(document.body);
+			
+				// Swipe left (to go to the next section)
+				hammer.on('swipeleft', () => {
+					if (currentIndex < sections.length - 1) {
+						currentIndex++;
+						showSection(currentIndex);
+					}
+				});
+			
+				// Swipe right (to go to the previous section)
+				hammer.on('swiperight', () => {
+					if (currentIndex > 0) {
+						currentIndex--;
+						showSection(currentIndex);
+					}
+				});
+			
+				// Detect current section based on hash
+				window.addEventListener('hashchange', () => {
+					const hash = window.location.hash;
+					currentIndex = sections.indexOf(hash);
+					if (currentIndex === -1) currentIndex = 0;
+				});
+			</script>
+			
 
 			<!-- Bring Them Home Now -->
 			<div id="bthn" lang="en"></div><script>
