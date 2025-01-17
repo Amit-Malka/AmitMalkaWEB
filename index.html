@@ -7,7 +7,10 @@
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		
-	    <!-- Google Analytics -->
+		<!-- Emoji Favicon -->
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+		
+		<!-- Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-WQLD8H4ECJ"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -16,6 +19,17 @@
 	
 		  gtag('config', 'G-WQLD8H4ECJ');
 		</script>
+		
+		<!-- SEO Meta Tags -->
+		<meta name="description" content="Amit Malka - Data Analyst Portfolio. Experienced in R, Python, and SQL with a background in biotechnology and data analysis.">
+		<meta name="keywords" content="Data Analyst, R, Python, SQL, Biotechnology, Portfolio, Amit Malka">
+		<meta name="author" content="Amit Malka">
+		
+		<!-- Open Graph Meta Tags for Social Media -->
+		<meta property="og:title" content="Amit Malka - Data Analyst Portfolio">
+		<meta property="og:description" content="Data Analyst experienced in R, Python, and SQL with a background in biotechnology.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="[Your Website URL]">
 	</head>
 
 	<body class="is-preload">
@@ -29,8 +43,13 @@
 						<a href="#about" class="icon solid fa-user"><span>About</span></a>
 						<a href="#Projects" class="icon solid fa-folder"><span>Projects</span></a>
 						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-						<a href="CV_AmitMalka.pdf" target="_blank" class="icon solid fa-file-pdf"><span>CV</span></a>
+						<a href="#cv" class="icon solid fa-file-pdf"><span>CV</span></a>
 					</nav>
+
+				<!-- Add this after the nav section -->
+				<div id="theme-toggle" class="theme-toggle">
+					<i class="fas fa-moon"></i>
+				</div>
 
 				<!-- Main -->
 					<div id="main">
@@ -150,6 +169,27 @@
 								</form>
 							</article>
 
+						<!-- CV -->
+						<article id="cv" class="panel">
+							<header>
+								<h2>CV</h2>
+							</header>
+							<div class="pdf-container">
+								<div id="pdf-loader" class="loader">Loading...</div>
+								<object data="CV_AmitMalka.pdf" type="application/pdf" width="100%" height="800px" onload="document.getElementById('pdf-loader').style.display='none'">
+									<p>Your browser does not support PDF viewing. <a href="CV_AmitMalka.pdf">Click here to download the file</a></p>
+								</object>
+							</div>
+							<a href="CV_AmitMalka.pdf" 
+							   onclick="gtag('event', 'download', {
+								 'event_category': 'CV',
+								 'event_label': 'CV Download'
+							   });" 
+							   class="download-cv">
+							   Download CV
+							</a>
+						</article>
+
 					</div>
 						
 
@@ -179,7 +219,7 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 			<script>
 				// Select the main navigation
-				const sections = ['#main', '#about', '#Projects', '#contact'];
+				const sections = ['#main', '#about', '#Projects', '#contact', '#cv'];
 				let currentIndex = 0;
 			
 				const showSection = (index) => {
@@ -231,6 +271,77 @@
 				   document.getElementsByTagName("head")[0].appendChild(script);
 				 })();
 				</script>
+
+			<!-- Add this script before the closing body tag -->
+			<script>
+				// Theme Toggle
+				const themeToggle = document.getElementById('theme-toggle');
+				const icon = themeToggle.querySelector('i');
+				
+				// Check for saved theme preference
+				if (localStorage.getItem('theme') === 'dark') {
+					document.body.classList.add('dark-mode');
+					icon.classList.replace('fa-moon', 'fa-sun');
+				}
+				
+				themeToggle.addEventListener('click', () => {
+					document.body.classList.toggle('dark-mode');
+					if (document.body.classList.contains('dark-mode')) {
+						localStorage.setItem('theme', 'dark');
+						icon.classList.replace('fa-moon', 'fa-sun');
+					} else {
+						localStorage.setItem('theme', 'light');
+						icon.classList.replace('fa-sun', 'fa-moon');
+					}
+				});
+			</script>
+
+			<script>
+				// Track form submissions
+				document.querySelector('form').addEventListener('submit', function() {
+					gtag('event', 'submit', {
+						'event_category': 'Contact',
+						'event_label': 'Contact Form'
+					});
+				});
+
+				// Track social links clicks
+				document.querySelectorAll('.social-links a').forEach(link => {
+					link.addEventListener('click', function() {
+						gtag('event', 'click', {
+							'event_category': 'Social',
+							'event_label': this.href
+						});
+					});
+				});
+
+				// Track project views
+				document.querySelector('[href="#Projects"]').addEventListener('click', function() {
+					gtag('event', 'view', {
+						'event_category': 'Section',
+						'event_label': 'Projects'
+					});
+				});
+
+				// Track time spent on each section
+				let startTime;
+				window.addEventListener('hashchange', function() {
+					const section = window.location.hash || '#main';
+					startTime = new Date();
+				});
+
+				window.addEventListener('beforeunload', function() {
+					if (startTime) {
+						const timeSpent = Math.round((new Date() - startTime) / 1000);
+						const section = window.location.hash || '#main';
+						gtag('event', 'time_spent', {
+							'event_category': 'Section',
+							'event_label': section,
+							'value': timeSpent
+						});
+					}
+				});
+			</script>
 
 	</body>
 </html>

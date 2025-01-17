@@ -209,4 +209,15 @@
 
 		}
 
+	// Select the main navigation
+	const sections = ['#main', '#about', '#Projects', '#contact', '#cv'];  // Added '#cv' to the sections array
+	let currentIndex = 0;
+
+	const showSection = (index) => {
+		const currentHash = sections[index];
+		if (currentHash) {
+			window.location.hash = currentHash;
+		}
+	};
+
 })(jQuery);

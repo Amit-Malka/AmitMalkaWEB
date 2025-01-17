@@ -1,0 +1,98 @@
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a !important;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(66, 66, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 66, 255, 0.1) 0%, transparent 50%),
+        linear-gradient(to bottom right, #1a1a1a, #2d2d2d) !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .panel {
+    background-color: rgba(45, 45, 45, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #main article.panel {
+    background-color: rgba(45, 45, 45, 0.9) !important;
+}
+
+/* Text colors in dark mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode .panel header p {
+    color: #ffffff !important;
+}
+
+body.dark-mode #nav a {
+    background: transparent !important;
+    transition: transform 0.2s ease;
+}
+
+body.dark-mode #nav a:hover {
+    background: transparent !important;
+    transform: scale(1.1);
+}
+
+body.dark-mode input, 
+body.dark-mode textarea {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+/* Ensure main panel background in dark mode */
+body.dark-mode #main .panel.intro {
+    background-color: #2d2d2d !important;
+}
+
+/* PDF Loader */
+.pdf-container {
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+} 
+
+/* Fix slider text in dark mode */
+body.dark-mode .slider .slide p {
+    color: #ffffff !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+} 
