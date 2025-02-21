@@ -210,7 +210,7 @@
 		}
 
 	// Select the main navigation
-	const sections = ['#main', '#about', '#Projects', '#contact', '#cv'];  // Added '#cv' to the sections array
+	const sections = ['#main', '#about', '#Projects', '#contact', '#cv'];
 	let currentIndex = 0;
 
 	const showSection = (index) => {
