@@ -85,6 +85,7 @@
 								<li><i class="fab fa-python"></i> Python - Advanced analytics with Pandas, NumPy, Matplotlib, and Seaborn</li>
 								<li><i class="fab fa-r-project"></i> R - Statistical modeling with dplyr, ggplot2, and tidyverse ecosystem</li>
 								<li><i class="fas fa-database"></i> SQL - Complex data querying, optimization, and database design</li>
+								<li><i class="fas fa-chart-bar"></i> Power BI - Interactive dashboards, DAX, and data modeling</li>
 							</ul>
 							<p class="skills-header">Web Development:</p>
 							<ul class="skills-list">
@@ -111,55 +112,104 @@
 								<h2>Projects</h2>
 							</header>
 							<p class="center-text">
-								Explore my portfolio showcasing advanced data analysis projects that demonstrate my expertise in transforming complex biological data into meaningful insights.
+								Explore my portfolio showcasing advanced data analysis projects that demonstrate my expertise in transforming complex data into meaningful insights.
 							</p>
-							<section>
-								<h3>Single-Cell RNA Sequencing Analysis</h3>
-								<p>
-									As a pioneer at the MIGAL Research Institute, I developed a comprehensive computational pipeline for single-cell RNA sequencing analysis. This groundbreaking project established a foundation for future researchers in the field.<br><br>
-									
-									The project focused on analyzing extensive gene expression datasets from three distinct rat models, investigating the effects of EPA lactone on hypertension. My work encompassed:<br>
-									• Rigorous data quality control and preprocessing<br>
-									• Advanced dimensionality reduction techniques<br>
-									• Sophisticated cell clustering and identification<br>
-									• Complex statistical analysis of treatment effects<br>
-									• Development of intuitive data visualizations<br><br>
-									
-									The complete project documentation and code are available on my GitHub repository.
-								</p>
-							</section>
-							<section>
-								<div class="slider-container">
-									<div class="slider">
-										<div class="slide">
-											<img src="images/macro.png" alt="Macro explanation">
-											<p>Macro explanation</p>
-										</div>
-										<div class="slide">
-											<img src="images/umap.png" alt="Classification using UMAP">
-											<p>Classification of cells into clusters using UMAP, each point represents a gene expression profile of a cell. Color sorting was based on gene expression similarity.</p>
-										</div>
-										<div class="slide">
-											<img src="images/marker.png" alt="Genetic marker example">
-											<p>Pf4 is a genetic marker for immune system cells (encoded for a cytokine in blood platelets).</p>
-										</div>
-										<div class="slide">
-											<img src="images/identity.png" alt="Mapping the identity of each cell cluster">
-											<p>Based on genetic markers I discovered the cell types in each cluster.</p>
-										</div>
-										<div class="slide">
-											<img src="images/volcano.png" alt="Differential gene expression analysis">
-											<p>Volcano plot shows that lactone treatment reduces the effect of hypertension on gene expression in endothelial cells.</p>
-										</div>
-										<div class="slide">
-											<img src="images/presentation.png" alt="Live presentation">
-											<p>Live presentation</p>
-										</div>
-									</div>
-									<button class="prev">&lt;</button>
-									<button class="next">&gt;</button>
+							
+							<!-- Project Selection -->
+							<div class="project-selector">
+								<div class="project-title" onclick="toggleProject('rna-project')">
+									<h3>Single-Cell RNA Sequencing Analysis</h3>
+									<p class="project-brief">Advanced computational pipeline for analyzing gene expression in hypertension research.</p>
+									<span class="toggle-icon">+</span>
 								</div>
-							</section>
+								
+								<div id="rna-project" class="project-content">
+									<section>
+										<p>
+											As a pioneer at the MIGAL Research Institute, I developed a comprehensive computational pipeline for single-cell RNA sequencing analysis. This groundbreaking project established a foundation for future researchers in the field.<br><br>
+											
+											The project focused on analyzing extensive gene expression datasets from three distinct rat models, investigating the effects of EPA lactone on hypertension. My work encompassed:<br>
+											• Rigorous data quality control and preprocessing<br>
+											• Advanced dimensionality reduction techniques<br>
+											• Sophisticated cell clustering and identification<br>
+											• Complex statistical analysis of treatment effects<br>
+											• Development of intuitive data visualizations<br><br>
+											
+											<a href="https://github.com/Amit-Malka/BSc-research-project" class="github-link" target="_blank">
+												<i class="fab fa-github"></i> View Project on GitHub
+											</a>
+										</p>
+									</section>
+									<section>
+										<div class="slider-container">
+											<div class="slider">
+												<div class="slide">
+													<img src="images/macro.png" alt="Macro explanation" class="lightbox-image">
+													<p>Macro explanation</p>
+												</div>
+												<div class="slide">
+													<img src="images/umap.png" alt="Classification using UMAP" class="lightbox-image">
+													<p>Classification of cells into clusters using UMAP, each point represents a gene expression profile of a cell. Color sorting was based on gene expression similarity.</p>
+												</div>
+												<div class="slide">
+													<img src="images/marker.png" alt="Genetic marker example" class="lightbox-image">
+													<p>Pf4 is a genetic marker for immune system cells (encoded for a cytokine in blood platelets).</p>
+												</div>
+												<div class="slide">
+													<img src="images/identity.png" alt="Mapping the identity of each cell cluster" class="lightbox-image">
+													<p>Based on genetic markers I discovered the cell types in each cluster.</p>
+												</div>
+												<div class="slide">
+													<img src="images/volcano.png" alt="Differential gene expression analysis" class="lightbox-image">
+													<p>Volcano plot shows that lactone treatment reduces the effect of hypertension on gene expression in endothelial cells.</p>
+												</div>
+												<div class="slide">
+													<img src="images/presentation.png" alt="Live presentation" class="lightbox-image">
+													<p>Live presentation</p>
+												</div>
+											</div>
+											<button class="prev">&lt;</button>
+											<button class="next">&gt;</button>
+										</div>
+									</section>
+								</div>
+
+								<div class="project-title" onclick="toggleProject('cve-project')">
+									<h3>CVE Security Insights Dashboard</h3>
+									<p class="project-brief">Interactive dashboard analyzing Common Vulnerabilities and Exposures trends (1999-2020).</p>
+									<span class="toggle-icon">+</span>
+								</div>
+								
+								<div id="cve-project" class="project-content">
+									<section>
+										<p>
+											An end-to-end analytics project delivering comprehensive insights into cybersecurity vulnerability trends. The dashboard combines advanced data processing with interactive visualization to transform raw CVE data into actionable intelligence.<br><br>
+											
+											Key Features:<br>
+											• Dynamic filtering by year range and severity levels<br>
+											• Real-time KPI tracking (Total CVEs, Avg CVSS Score, Patch Response Time)<br>
+											• Trend analysis with statistical correlations<br>
+											• Access vector distribution analysis<br>
+											• Top 10 CWE (Common Weakness Enumeration) categories<br><br>
+											
+											Technologies Used:<br>
+											• Splunk for data processing and SPL queries<br>
+											• Power BI for interactive dashboard creation<br>
+											• DAX for advanced calculations<br>
+											• Statistical analysis (Pearson correlation, R² analytics)<br><br>
+											
+											<a href="https://github.com/Amit-Malka/CVE-Security-Insights-Dashboard" class="github-link" target="_blank">
+												<i class="fab fa-github"></i> View Project on GitHub
+											</a>
+										</p>
+									</section>
+									<section>
+										<div class="project-image">
+											<img src="images/CVE.png" alt="CVE Analysis Dashboard" class="full-width-image lightbox-image">
+										</div>
+									</section>
+								</div>
+							</div>
 						</article>
 						
 
@@ -322,7 +372,7 @@
 				const lightboxImg = lightbox.querySelector('img');
 				const lightboxClose = lightbox.querySelector('.lightbox-close');
 
-				document.querySelectorAll('.slide img').forEach(img => {
+				document.querySelectorAll('.lightbox-image').forEach(img => {
 					img.addEventListener('click', () => {
 						lightboxImg.src = img.src;
 						lightboxImg.alt = img.alt;

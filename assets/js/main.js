@@ -220,4 +220,27 @@
 		}
 	};
 
+	// Project Toggle Function
+	function toggleProject(projectId) {
+		const content = document.getElementById(projectId);
+		const title = content.previousElementSibling;
+		const allContents = document.querySelectorAll('.project-content');
+		const allTitles = document.querySelectorAll('.project-title');
+		
+		// Close all other projects
+		allContents.forEach(item => {
+			if (item.id !== projectId && item.classList.contains('active')) {
+				item.classList.remove('active');
+				item.previousElementSibling.classList.remove('active');
+			}
+		});
+		
+		// Toggle the clicked project
+		content.classList.toggle('active');
+		title.classList.toggle('active');
+	}
+
+	// Make the toggleProject function globally available
+	window.toggleProject = toggleProject;
+
 })(jQuery);
