@@ -31,22 +31,6 @@ A modern, responsive portfolio website showcasing my professional experience, te
   - Google Analytics for tracking
   - Formspree for form handling
 
-## 🔧 Development
-
-To run this project locally:
-
-1. Clone the repository
-```bash
-git clone https://github.com/Amit-Malka/portfolio.git
-```
-
-2. Navigate to the project directory
-```bash
-cd portfolio
-```
-
-3. Open `index.html` in your browser
-
 ## 📱 Responsive Design
 
 The website is fully responsive and has been tested on:
@@ -86,4 +70,4 @@ This project is open source and available under the [MIT License](LICENSE).
 Feel free to reach out if you have any questions or suggestions:
 - LinkedIn: [Amit Malka](https://www.linkedin.com/in/--amitmalka--/)
 - GitHub: [@Amit-Malka](https://github.com/Amit-Malka)
-- Portfolio: [View Live Site](https://amit-malka.github.io/portfolio)
+- Portfolio: [View Live Site](https://amit-malka.github.io/AmitMalkaWEB/)
