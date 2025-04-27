@@ -458,4 +458,41 @@ body.dark-mode .toggle-icon {
 
 .dark-mode .github-link:hover {
     background: #3cc85f;
+}
+
+/* Streamlit Link Button */
+.streamlit-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #ff4b4b;
+    color: white !important;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.streamlit-link:hover {
+    background-color: #ff2b2b;
+    text-decoration: none;
+}
+
+.streamlit-icon {
+    margin-right: 8px;
+}
+
+/* Dark mode support */
+.dark-mode .streamlit-link {
+    background-color: #ff4b4b;
+    color: white !important;
+}
+
+.dark-mode .streamlit-link:hover {
+    background-color: #ff2b2b;
+}
+
+.dark-mode .streamlit-icon {
+    color: white;
 } 
