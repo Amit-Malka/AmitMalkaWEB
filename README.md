@@ -6,6 +6,7 @@ A modern, responsive portfolio website showcasing my professional experience, te
 
 - **Responsive Design**: Fully responsive layout that works on all devices
 - **Dark Mode**: Toggle between light and dark themes
+- **Multi-Language Support**: One-click language switch (English/Hebrew), RTL/LTR, easy to add more languages
 - **Interactive UI**: 
   - Smooth scrolling navigation
   - Parallax effects
@@ -71,3 +72,10 @@ Feel free to reach out if you have any questions or suggestions:
 - LinkedIn: [Amit Malka](https://www.linkedin.com/in/--amitmalka--/)
 - GitHub: [@Amit-Malka](https://github.com/Amit-Malka)
 - Portfolio: [View Live Site](https://amit-malka.github.io/AmitMalkaWEB/)
+
+---
+
+### ℹ️ Multi-Language (i18n) – Quick Guide
+- All texts use `data-i18n` in HTML and are translated via JSON files in `assets/js/i18n/`.
+- Language is toggled with a single button (flag icon), and direction (RTL/LTR) updates automatically.
+- To add a language: copy an existing JSON, translate, and update the language switch logic if needed.
