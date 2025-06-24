@@ -1,14 +1,20 @@
 <html>
 	<head>
-		<title>Amit Malka</title>
+		<title>Amit Malka - Data Analyst | AI Developer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<!-- Preconnect for performance -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		
-		<!-- Emoji Favicon -->
-		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+		<!-- AI-themed Favicon -->
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
 		
 		<!-- Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-WQLD8H4ECJ"></script>
@@ -21,15 +27,63 @@
 		</script>
 		
 		<!-- SEO Meta Tags -->
-		<meta name="description" content="Amit Malka - Data Analyst Portfolio. Experienced in R, Python, and SQL with a background in biotechnology and data analysis.">
-		<meta name="keywords" content="Data Analyst, R, Python, SQL, Biotechnology, Portfolio, Amit Malka">
+		<meta name="description" content="Amit Malka - Data Analyst transitioning to AI Development. Currently advancing expertise in LLMs, AI agents, and RAG systems through intensive training at Ben-Gurion University. Experienced in Python, R, and modern web development.">
+		<meta name="keywords" content="Data Analyst, AI Developer, Machine Learning, LLM, Large Language Models, RAG, AI Agents, Python, R, SQL, Ben-Gurion University, Biotechnology, Portfolio, Amit Malka">
 		<meta name="author" content="Amit Malka">
 		
 		<!-- Open Graph Meta Tags for Social Media -->
-		<meta property="og:title" content="Amit Malka - Data Analyst Portfolio">
-		<meta property="og:description" content="Data Analyst experienced in R, Python, and SQL with a background in biotechnology.">
+		<meta property="og:title" content="Amit Malka - Data Analyst | AI Developer">
+		<meta property="og:description" content="Data Analyst transitioning to AI Development. Currently advancing expertise in LLMs and AI agents through intensive training at Ben-Gurion University.">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="[Your Website URL]">
+		<meta property="og:url" content="https://amit-malka.github.io">
+		<meta property="og:image" content="https://amit-malka.github.io/images/me.jpg">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:locale:alternate" content="he_IL">
+		
+		<!-- Twitter Card Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Amit Malka - Data Analyst | AI Developer">
+		<meta name="twitter:description" content="Data Analyst transitioning to AI Development. Currently advancing expertise in LLMs and AI agents.">
+		<meta name="twitter:image" content="https://amit-malka.github.io/images/me.jpg">
+		
+		<!-- Structured Data (JSON-LD) -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Person",
+		  "name": "Amit Malka",
+		  "alternateName": "עמית מלכה",
+		  "jobTitle": ["Data Analyst", "AI Developer"],
+		  "description": "Data Analyst transitioning to AI Development with expertise in LLMs, AI agents, and statistical analysis",
+		  "url": "https://amit-malka.github.io",
+		  "sameAs": [
+		    "https://www.linkedin.com/in/--amitmalka--/",
+		    "https://github.com/Amit-Malka"
+		  ],
+		  "alumniOf": [
+		    {
+		      "@type": "CollegeOrUniversity",
+		      "name": "Ben-Gurion University of the Negev",
+		      "alternateName": "אוניברסיטת בן-גוריון בנגב"
+		    }
+		  ],
+		  "knowsAbout": [
+		    "Data Analysis",
+		    "Artificial Intelligence", 
+		    "Machine Learning",
+		    "Large Language Models",
+		    "Python Programming",
+		    "R Programming",
+		    "SQL",
+		    "Biotechnology"
+		  ],
+		  "worksFor": {
+		    "@type": "Organization",
+		    "name": "Freelance"
+		  }
+		}
+		</script>
+		
 		<script src="assets/js/i18n.js"></script>
 	</head>
 
@@ -86,6 +140,15 @@
 								<li data-i18n="skills_sql"></li>
 								<li data-i18n="skills_powerbi"></li>
 							</ul>
+							<p class="skills-header ai-skills-header" data-i18n="skills_header_ai"></p>
+							<ul class="skills-list ai-skills-list">
+								<li data-i18n="skills_llm" class="ai-skill currently-learning"></li>
+								<li data-i18n="skills_rag" class="ai-skill currently-learning"></li>
+								<li data-i18n="skills_agents" class="ai-skill currently-learning"></li>
+								<li data-i18n="skills_prompt" class="ai-skill currently-learning"></li>
+								<li data-i18n="skills_vector" class="ai-skill currently-learning"></li>
+								<li data-i18n="skills_tools" class="ai-skill currently-learning"></li>
+							</ul>
 							<p class="skills-header" data-i18n="skills_header_web"></p>
 							<ul class="skills-list">
 								<li data-i18n="skills_react"></li>
@@ -99,6 +162,59 @@
 								<li data-i18n="skills_project"></li>
 							</ul>
 							<p data-i18n="about_summary"></p>
+							
+							<!-- AI Journey Timeline -->
+							<div class="ai-journey-section">
+								<h3 class="ai-journey-title" data-i18n="ai_journey_title"></h3>
+								<p class="ai-journey-intro" data-i18n="ai_journey_intro"></p>
+								
+								<div class="ai-timeline">
+									<div class="timeline-item completed">
+										<div class="timeline-date" data-i18n="timeline_date_1"></div>
+										<div class="timeline-content">
+											<h4 data-i18n="timeline_title_1"></h4>
+											<p data-i18n="timeline_desc_1"></p>
+										</div>
+									</div>
+									
+									<div class="timeline-item current">
+										<div class="timeline-date" data-i18n="timeline_date_2"></div>
+										<div class="timeline-content">
+											<h4 data-i18n="timeline_title_2"></h4>
+											<p data-i18n="timeline_desc_2"></p>
+											<div class="progress-container">
+												<div class="progress-bar">
+													<div class="progress-fill" data-progress="25"></div>
+												</div>
+												<span class="progress-text" data-i18n="timeline_progress"></span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="timeline-item future">
+										<div class="timeline-date" data-i18n="timeline_date_3"></div>
+										<div class="timeline-content">
+											<h4 data-i18n="timeline_title_3"></h4>
+											<p data-i18n="timeline_desc_3"></p>
+										</div>
+									</div>
+									
+									<div class="timeline-item future">
+										<div class="timeline-date" data-i18n="timeline_date_4"></div>
+										<div class="timeline-content">
+											<h4 data-i18n="timeline_title_4"></h4>
+											<p data-i18n="timeline_desc_4"></p>
+										</div>
+									</div>
+								</div>
+								
+								<div class="course-link-container">
+									<a href="https://www.bgu.ac.il" target="_blank" class="course-link" data-i18n="course_link">
+										<i class="fas fa-university"></i>
+										<span data-i18n="course_link_text"></span>
+									</a>
+								</div>
+							</div>
 						</article>
 					
 						
