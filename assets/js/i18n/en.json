@@ -29,7 +29,7 @@
   "nav_contact": "Contact",
   "nav_cv": "CV",
   "intro_name": "Amit Malka",
-  "intro_desc": "Curious data analyst transitioning to AI development with strong foundation in programming and statistical analysis.<br>Currently advancing expertise in Large Language Models and AI agent development through intensive training at Ben-Gurion University.",
+  "intro_desc": "Curious data analyst transitioning to AI development with strong foundation in programming and statistical analysis.<br>Currently advancing expertise in Large Language Models and AI agent development through intensive training at The Institute AI(Ben-Gurion University).",
   "slider_macro": "Macro explanation",
   "slider_umap": "Classification of cells into clusters using UMAP, each point represents a gene expression profile of a cell. Color sorting was based on gene expression similarity.",
   "slider_marker": "Pf4 is a genetic marker for immune system cells (encoded for a cytokine in blood platelets).",
@@ -87,6 +87,6 @@
   "timeline_date_4": "End 2025 & Beyond",
   "timeline_title_4": "AI Career Transition",
   "timeline_desc_4": "Seeking opportunities to apply AI expertise in innovative projects while continuing to expand knowledge in emerging technologies.",
-  "course_link": "Learn more about Ben-Gurion University",
-  "course_link_text": "Ben-Gurion University AI Program"
+  "course_link": "Learn more about The Institute AI",
+  "course_link_text": "The Institute AI"
 } 
