@@ -88,5 +88,9 @@
   "timeline_title_4": "מעבר קריירה ל-AI",
   "timeline_desc_4": "חיפוש הזדמנויות ליישום מומחיות AI בפרויקטים חדשניים תוך המשך הרחבת הידע בטכנולוגיות מתפתחות.",
   "course_link": "למד עוד על אוניברסיטת בן-גוריון",
-  "course_link_text": "תכנית AI באוניברסיטת בן-גוריון"
+  "course_link_text": "תכנית AI באוניברסיטת בן-גוריון",
+  "project_medical_rag_title": "פרויקט Medical RAG POC",
+  "project_medical_rag_brief": "הוכחת היתכנות למערכת שאלות-תשובות רפואית מבוססת RAG באמצעות FAISS ו-Ollama.",
+  "project_medical_rag_content": "פרויקט זה מדגים מערכת Retrieval-Augmented Generation לשאילתות רפואיות, תוך שימוש ב-FAISS לחיפוש וקטורי וב-Ollama להסקה מקומית של LLM.",
+  "project_medical_rag_github": "צפה ב-GitHub"
 } 

@@ -88,5 +88,9 @@
   "timeline_title_4": "AI Career Transition",
   "timeline_desc_4": "Seeking opportunities to apply AI expertise in innovative projects while continuing to expand knowledge in emerging technologies.",
   "course_link": "Learn more about The Institute AI",
-  "course_link_text": "The Institute AI"
+  "course_link_text": "The Institute AI",
+  "project_medical_rag_title": "Medical RAG POC",
+  "project_medical_rag_brief": "Proof of Concept for a Medical Question-Answering RAG system using FAISS and Ollama.",
+  "project_medical_rag_content": "This project demonstrates a Retrieval-Augmented Generation system for medical queries, utilizing FAISS for vector search and Ollama for local LLM inference.",
+  "project_medical_rag_github": "View on GitHub"
 } 
