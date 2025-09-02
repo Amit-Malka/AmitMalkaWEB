@@ -1871,6 +1871,15 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 736px) {
+
+			#nav a {
+				font-size: 2em;
+				margin: 0 0.15em 0 0.15em;
+			}
+
+		}
+
 /* Wrapper */
 
 	#wrapper {

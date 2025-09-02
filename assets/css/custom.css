@@ -621,83 +621,9 @@ body.dark-mode .skills-header {
     color: #ffffff;
 }
 
-/* AI Skills Specific Styling */
-.ai-skills-header {
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-	font-weight: 600;
-	position: relative;
-}
 
-.ai-skills-header::after {
-	content: "🚀";
-	position: absolute;
-	margin-left: 10px;
-	-webkit-text-fill-color: initial;
-	background: none;
-}
 
-.ai-skills-list {
-	border-left: 3px solid #667eea;
-	padding-left: 15px;
-	margin-left: 10px;
-}
 
-.ai-skill.currently-learning {
-	position: relative;
-	padding: 8px 12px;
-	margin: 5px 0;
-	background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-	border-radius: 8px;
-	border: 1px solid rgba(102, 126, 234, 0.2);
-	transition: all 0.3s ease;
-}
-
-.ai-skill.currently-learning::after {
-	content: "📚 In Progress";
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 0.8em;
-	color: #667eea;
-	font-weight: 500;
-	background: rgba(255, 255, 255, 0.9);
-	padding: 2px 8px;
-	border-radius: 12px;
-	border: 1px solid #667eea;
-}
-
-.ai-skill.currently-learning:hover {
-	transform: translateX(5px);
-	box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-	background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
-}
-
-/* Dark mode adjustments for AI skills */
-body.dark-mode .ai-skills-header {
-	background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-}
-
-body.dark-mode .ai-skills-list {
-	border-left-color: #4facfe;
-}
-
-body.dark-mode .ai-skill.currently-learning {
-	background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
-	border-color: rgba(79, 172, 254, 0.3);
-}
-
-body.dark-mode .ai-skill.currently-learning::after {
-	color: #4facfe;
-	background: rgba(45, 45, 45, 0.9);
-	border-color: #4facfe;
-}
 
 /* Project Selector Styles */
 .project-selector {
@@ -1075,39 +1001,7 @@ body.dark-mode .lang-switcher button:hover, body.dark-mode .lang-switcher button
 	margin-right: 2em;
 }
 
-/* Progress Bar */
-.progress-container {
-	margin-top: 1em;
-}
 
-.progress-bar {
-	width: 100%;
-	height: 8px;
-	background: rgba(102, 126, 234, 0.2);
-	border-radius: 4px;
-	overflow: hidden;
-}
-
-.progress-fill {
-	height: 100%;
-	background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-	border-radius: 4px;
-	width: 25%;
-	animation: progressAnimation 2s ease-out;
-}
-
-@keyframes progressAnimation {
-	from { width: 0%; }
-	to { width: 25%; }
-}
-
-.progress-text {
-	display: block;
-	margin-top: 0.5em;
-	font-size: 0.8em;
-	color: #667eea;
-	font-weight: 500;
-}
 
 /* Course Link */
 .course-link-container {
@@ -1187,17 +1081,7 @@ body.dark-mode .timeline-item.future::before {
 	border-color: #4facfe;
 }
 
-body.dark-mode .progress-bar {
-	background: rgba(79, 172, 254, 0.2);
-}
 
-body.dark-mode .progress-fill {
-	background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
-}
-
-body.dark-mode .progress-text {
-	color: #4facfe;
-}
 
 body.dark-mode .course-link {
 	background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -1239,5 +1123,18 @@ body.dark-mode .course-link {
 		margin-left: 0;
 		margin-right: 0;
 		padding: 1em;
+	}
+}
+
+/* Mobile Skills Adjustments */
+@media screen and (max-width: 736px) {
+	.skills-list li:hover {
+		transform: none;
+		padding: 0.5em 0;
+		background: none;
+	}
+
+	.skills-list li:hover i {
+		transform: none;
 	}
 } 
